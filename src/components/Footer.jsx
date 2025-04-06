@@ -1,28 +1,25 @@
+import { Github, Linkedin } from "react-bootstrap-icons";
+
 function Footer() {
   return (
-    <footer>
-      <p>© 2023 Your Name. All rights reserved.</p>
-      <div className="social-links">
+    <footer className="py-4 bg-dark text-white text-center">
+      <p>© 2025 Shauna Deleon. All rights reserved.</p>
+      <div className="social-links d-flex justify-content-center gap-3 mt-2">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/pojoto4"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
         >
-          GitHub
+          <Github size={24} />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/ashley-shauna-deleon"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
-          LinkedIn
-        </a>
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
+          <Linkedin size={24} />
         </a>
       </div>
     </footer>
