@@ -6,14 +6,6 @@ function Resume() {
       <Row className="mb-5">
         <Col>
           <h1>My Resume</h1>
-          <Button
-            variant="primary"
-            href="/path-to-your-resume.pdf"
-            target="_blank"
-            download
-          >
-            Download Full Resume
-          </Button>
         </Col>
       </Row>
 
@@ -33,17 +25,23 @@ function Resume() {
       <Row className="mb-5">
         <Col>
           <h2>Experience</h2>
-          <h3>Software Developer - XYZ Company</h3>
+          <h4>Project Manager</h4>
           <p>June 2020 - Present</p>
           <ul>
             <li>
-              Developed and maintained web applications using React and Node.js
+              Created and maintained efficient project workflows and
+              communication processes, ensuring clarity on project milestones
+              and next steps among internal and external teams
             </li>
             <li>
-              Collaborated with design team to implement responsive UI designs
+              Collaborated consistently with major departments including Legal,
+              IT, HR, Finance, Marketing, Communications, Corporate Social
+              Responsibility, Talent Acquisition, and Information Security
             </li>
             <li>
-              Optimized application performance, reducing load times by 30%
+              Organized feedback from stakeholders and incorporated them into
+              project revisions, tracking versioning with designated software
+              platforms (Wrike and MediaSilo)
             </li>
           </ul>
         </Col>
@@ -52,8 +50,8 @@ function Resume() {
       <Row>
         <Col>
           <h2>Education</h2>
-          <h3>Bachelor of Science in Computer Science</h3>
-          <p>University of Technology, Graduated May 2020</p>
+          <h4>Bachelor of Arts in Psychology</h4>
+          <p>Simmons College, Graduated May 2014</p>
         </Col>
       </Row>
     </Container>

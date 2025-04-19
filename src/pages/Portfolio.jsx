@@ -1,43 +1,59 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { useState, useEffect } from "react";
 import Project from "../components/Project";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Portfolio() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const projects = [
     {
-      id: 1,
-      title: "Project One",
-      description: "A brief description of your first project",
-      image: "/images/project1.jpg",
-      demoLink: "https://demo-link-1.com",
-      githubLink: "https://github.com/pojoto4/employeeTracker",
+      title: "README Generator",
+      description: "A command-line application that generates a README file",
+      image:
+        "https://cdn.hashnode.com/res/hashnode/image/upload/v1737504143275/d8e518ff-3f72-4147-9923-53588bfcf839.png",
+      githubLink: "https://github.com/pojoto4/READMEGenerator",
     },
     {
-      id: 2,
-      title: "Project Two",
-      description: "A brief description of your second project",
-      image: "/images/project2.jpg",
-      demoLink: "https://demo-link-2.com",
+      title: "Mindless Lounge",
+      description: "A fake social media website where you can post thoughts",
+      image:
+        "https://cdn4.iconfinder.com/data/icons/car-accident-2/512/distracted-brain-mind-head-person-512.png",
       githubLink: "https://github.com/pojoto4/mindlessLounge",
+    },
+    {
+      title: "Employee Tracker",
+      description:
+        "This is a command-line application that helps keep track of employees and their roles, salaries, departments and managers",
+      image:
+        "https://tivazo.com/wp-content/uploads/2024/07/employee-monitoring-software-1.png",
+      githubLink: "https://github.com/pojoto4/employeetracker",
     },
   ];
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="portfolio-section py-5">
+    <section id="projects" className="py-5">
       <Container>
-        <h2 className="text-center mb-5">My Projects</h2>
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {projects.map((project) => (
-            <Col key={project.id}>
-              <Project
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                demoLink={project.demoLink}
-                githubLink={project.githubLink}
-              />
-            </Col>
-          ))}
-        </Row>
+        <h2 className="text-center mb-4">My GitHub Projects</h2>
+
+        {isLoading ? (
+          <p className="text-center">Loading projects...</p>
+        ) : (
+          <Row xs={1} md={2} lg={3} className="g-4">
+            {projects.map((project, index) => (
+              <Col key={index}>
+                <Project {...project} />
+              </Col>
+            ))}
+          </Row>
+        )}
       </Container>
     </section>
   );
