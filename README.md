@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a front-end application that lets you view my portfolio comporsed of my latest projects and full resume
+This is a front-end application that lets you view my portfolio composed of my latest projects and full resume: cerulean-muffin-859c07.netlify.app
 
 ## Table of Contents
 
@@ -17,15 +17,15 @@ This is a front-end application that lets you view my portfolio comporsed of my 
 
 ## Installation
 
-You need to npm i to install everything in the package.json and then you can run the dev script
+You need to npm i to install everything in the package.json and then you can run npm run start
 
 ## Usage
 
-Once you get the app running, you can press the minus button when you want to see the next profile and press the plus button when you want to add that profile to the Potential Candidates page. You can also go to that page and delete profiles from your list.
+This is just to show how you can format a personal portfolio page on the front end
 
 ## Contributing
 
-This was built from a template provided in the develop folder
+This was based on what I learned from the second project
 
 ## License
 
@@ -35,7 +35,7 @@ License: MIT
 
 ## Tests
 
-I would run the dev scripts and tinker around with skipping, adding and deleting candidates
+Keep changing different componenents and pages to see how things show up on the pages
 
 ## Questions
 
